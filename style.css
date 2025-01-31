@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    }
+
+body {
+    background-color: #000;
+    color: #fff;
+    /*display: flex;*/
+    flex-direction: column;
+    height: 100vh;
+    width: 225vh;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Adjust height for better spacing */
+    z-index: 10;
+}
+
+.logo img {
+    width: 35px;
+    height: auto;
+    margin-left: 27px; ;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center everything in nav */
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* Center Search Bar */
+.nav-center {
+    flex: 1; /* Allows the search bar to take up available space */
+    display: flex;
+    justify-content: center; /* Center the search bar */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;   
+    align-items: center;
+    background-color: #1b1a1a;
+    border-radius: 30px;
+    padding: 3px 15px;
+    width: 450px;
+    position:relative;
+}
+
+.search-bar input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+    text-align: left;
+}
+
+/* Icons inside the search bar */
+.search-icon{
+    width: 10%; /* Adjust the size of the icons */
+    height: 10%;
+    margin: 0; /* Spacing between input and icons */
+}
+.browse-icon {
+    width: 6%; /* Adjust the size of the icons */
+    height: 6%;
+    margin: 0; /* Spacing between input and icons */
+}
+
+/* General button styles */
+button {
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none; /* Remove border */
+    cursor: pointer;
+    font-size: 14px;
+    background: transparent;
+    color: white;
+}
+
+/* Fix for sign-up and login buttons */
+.sign-up, .login {
+    border: none; /* Ensure no border */
+    background-color: white; /* White background for login button */
+    color: black; /* Black text */
+    font-weight: bold;
+}
+
+/* Fix white outline in language button */
+.language-button {
+    text-align: center;
+    width: 110px;
+    background-color: #000; /* Black background */
+    height: 30px;
+    border-radius: 26px;
+    color: #b3adad; /* Light grey text */
+    font-size: 12px;
+    border: 1px solid #b3adad; /* Add border explicitly */
+    outline: none; /* Remove outline effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.lang-icon {
+    width: 15px; /* Adjust icon size */
+    height: 15px;
+}
+
+.sign-up {
+    background: transparent;
+    color: white;
+    margin-left: 80px;
+}
+
+.login {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    padding-top: 70px;
+}
+
+
+.sidebar {
+    
+    width: 23%;
+    height:80%;
+    background: linear-gradient(#1b1a1a,#000);
+    padding: 27px 10px 35px 10px;
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/*library*/
+
+.library-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.library-header img {
+    width: 7%;
+    height: 7%;
+    margin-right: 15px; 
+}
+
+.library-header h3 {
+    flex-grow: 1;
+    color: #aaa;
+}
+
+.library-header span {
+    content: "+";
+    font-size: 25px;
+    color: #aaa;
+    cursor: pointer;
+    margin-right: 15px;
+    
+    
+}
+
+*.create-playlist p, .create-podcasts p{
+    font-size: 12px;
+    line-height: 1.8;
+
+}
+.create-playlist, .create-podcasts{
+    width: 48vh;
+    height: 18.40vh;
+    background: #2b2828;
+    padding: 20px ;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.create-playlist h4, .create-podcasts h4 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.create-playlist-button p, .create-podcasts-button p {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    font-weight: 730;
+    
+}
+
+.create-playlist-button, .create-podcasts-button {
+   display: inline-block;   
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    background: white;
+    margin-top: 15px;
+}
+
+.create-playlist-button:hover, .create-podcasts-button:hover {
+    background: #e0e0e0; /* Light grey hover effect */
+}
+
+.sidebar button:hover {
+    background: #fdfbfb;
+}
+
+.privacy ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.privacy ul li {
+    padding-bottom: 8px;
+    line-height:1.5;
+}
+
+.privacy ul li a {
+    text-decoration: none;
+    color: #b3adad;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+.privacy ul li a:hover {
+    text-decoration: underline;
+    color: #c9c7c7;
+}
+
+.language-button:hover {
+    outline-color:beige ;
+}
+.language-button img{
+     width: 22px;
+     height: auto;
+     margin-left: 3px; ;
+       
+    }
+    
+
+.right-content {
+    background:linear-gradient(#1b1a1a,#000);
+    width: 77%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 22px 10px 0 10px;
+    border-radius: 10px;
+}
+
+/*right side of main content*/
+.popular-artists, .popular-albums {
+    padding: 0 10px 0 10px;
+}
+
+.popular-artists h2, .popular-albums h2{
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+.popular-artists h5, .popular-albums h5{
+    padding-bottom: 6px;
+}
+.popular-artists p, .popular-albums p{
+    font-size: 12px;
+    color: #b3adad;
+}
+.artists, .albums {
+    display: flex;
+    flex-wrap:nowrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.popular-artists .artists img{
+    width: 164px;
+    height: 164px;
+    border-radius: 80%;
+    gap: 10px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.albums img {
+    width: 164px;
+    height: 164px;
+    border-radius: 10%;
+    gap: 10px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.artist img:hover, .album img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    height: 10%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    padding: 17px 0 15px 28px;
+    background: #ebe8e8;;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+.copyright {
+    height: 10%;
+    width: 85%;
+    color:#000 ; /* Light grey color for better readability */
+    font-size: 13px; /* Adjust text size */
+    text-align: center; /* Ensure text is centered */
+    font-weight: 500; /* Slightly bold for clarity */
+}
+.copyright p{
+    text-align: left;
+    flex-direction: column;
+}
